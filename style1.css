@@ -228,7 +228,13 @@
 }
 @media screen and (max-width:720px){
     .hero{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+        margin: 0 auto;
+        height: 100%;
     }
     .hero_heading{
         font-size: 60px;
