@@ -179,7 +179,6 @@
 
 /*hero section*/
 .hero{
-    /* background-image: url('afeez2.jpg'); */
     background: #000000;
     background: linear-gradient(to right, #161616, #000000);
     background-position: center;
@@ -228,6 +227,9 @@
     border-bottom: 4px solid rgb(132, 0, 255);
 }
 @media screen and (max-width:720px){
+    .hero{
+        width: 100%;
+    }
     .hero_heading{
         font-size: 60px;
 
