@@ -355,7 +355,7 @@
 }*/
 
 /*mobile Responsive*/
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 720px){
     .main_container{
         display: grid;
         grid-template-columns: 1fr;
