@@ -10,7 +10,7 @@
 <body>
     <section>
         <div class="container">
-            <form action="https://formspree.io/f/xqknkljg" method="POST" id="my-form">
+            <form action= "https://formspree.io/f/xqknkljg"  method="POST" id="my-form">
                 <div class="form-group">
                     <label for="firstName"> First Name </label>
                     <input type="text" id="firstName" name="firstName">
@@ -38,6 +38,27 @@
         <div id="status" class="success"></div>
         <div id="status" class="error"></div>
     </section>
-    <script src="./contact.js"></script>
+  <script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
 </body>
 </html>
