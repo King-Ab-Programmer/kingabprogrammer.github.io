@@ -114,7 +114,7 @@
         z-index: 1;
     }
     .navbar_menu.active{
-        background: #131313;
+        background: #fff;
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -199,7 +199,7 @@
 .hero_heading{
     font-size: 100px;
     margin-bottom: 24px;
-    color: #fff;
+    color: #131313;
 }
 .hero_heading span{
     background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
